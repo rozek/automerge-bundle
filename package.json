@@ -31,11 +31,15 @@
     "type": "git",
     "url": "git+https://github.com/rozek/automerge-bundle.git"
   },
-  "dependencies": {
-    "yarn": "^1.22.22"
-  },
   "devDependencies": {
     "microbundle": "^0.15.1",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@automerge/automerge": "^2.1.11-richtext-alpha.1",
+    "@automerge/automerge-repo": "^1.1.2",
+    "@automerge/automerge-repo-network-broadcastchannel": "^1.1.2",
+    "@automerge/automerge-repo-network-websocket": "^1.1.2",
+    "@automerge/automerge-repo-storage-indexeddb": "^1.1.2"
   }
 }
