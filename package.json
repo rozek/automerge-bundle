@@ -24,7 +24,7 @@
   "module": "./dist/automerge-bundle.module.js",
   "unpkg": "./dist/automerge-bundle.umd.js",
   "scripts": {
-    "build": "rimraf dist && microbundle -f es,umd --target web",
+    "build": "rimraf dist && microbundle --name automerge --target web",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
