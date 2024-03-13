@@ -1,0 +1,45 @@
+{
+  "name": "automerge-bundle",
+  "version": "0.0.1",
+  "description": "an automerge bundle that can be used in no-build environments",
+  "keywords": [
+    "automerge",
+    "crdt"
+  ],
+  "author": "Andreas Rozek <a.rozek@gmx.de> (https://www.rozek.de/)",
+  "license": "MIT",
+  "homepage": "https://github.com/rozek/automerge-bundle#readme",
+  "bugs": {
+    "url": "https://github.com/rozek/automerge-bundle/issues"
+  },
+
+  "type": "module",
+  "source": "./src/automerge-bundle.js",
+  "types": "./dist/automerge-bundle.d.ts",
+  "exports": {
+  	"types": "./dist/automerge-bundle.d.ts",
+    "require": "./dist/automerge-bundle.cjs",
+    "default": "./dist/automerge-bundle.modern.js"
+  },
+  "main": "./dist/automerge-bundle.cjs",
+  "module": "./dist/automerge-bundle.module.js",
+  "unpkg": "./dist/automerge-bundle.umd.js",
+
+  "scripts": {
+    "build": "rimraf dist && microbundle",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rozek/automerge-bundle.git"
+  },
+  
+  "dependencies": {
+  },
+  
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "microbundle": "^0.15.1"
+  }
+}
