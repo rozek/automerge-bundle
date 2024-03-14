@@ -37,11 +37,11 @@ Or, alternatively, you just load the `automerge-bundle` from this repository usi
 
 As a consequence, instead of
 
-`import { next } from "@automerge/automerge"`
+`  import { next } from "@automerge/automerge"`
 
 you now write
 
-`const { next } = window.automerge`
+`  const { next } = window.automerge`
 
 or similar - as soon as `automerge` has become available.
 
