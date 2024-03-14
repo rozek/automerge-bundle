@@ -17,10 +17,33 @@ Or, alternatively, you just load the `automerge-bundle` from this repository usi
   }
 
   function runApplication () {
+    const {
+      next, isValidAutomergeUrl, Repo,
+      IndexedDBStorageAdapter, BrowserWebSocketClientAdapter, BroadcastChannelNetworkAdapter
+    } = window.automerge
+
 // ....insert your automerge code here
   }
 </script>
 ```
+
+`automerge-bundle` creates a global called `automerge` with the following contents
+
+* `next` - imported from `@automerge/automerge`
+* `isValidAutomergeUrl` and `Repo` - imported from `@automerge/automerge-repo`
+* `IndexedDBStorageAdapter` - imported from `@automerge/automerge-repo-storage-indexeddb`
+* `BrowserWebSocketClientAdapter` - imported from `@automerge/automerge-repo-network-websocket`
+* `BroadcastChannelNetworkAdapter` - imported from `@automerge/automerge-repo-network-broadcastchannel`
+
+As a consequence, instead of
+
+`import { next } from "@automerge/automerge"`
+
+you now write
+
+`const { next } = window.automerge`
+
+or similar - as soon as `automerge` has become available.
 
 ## Build Instructions ##
 
