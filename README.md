@@ -3,7 +3,7 @@
 an automerge bundle that can be used in no-build environments
 
 ```html
-<script type="module" src="https://rozek.github.io/automerge-bundle/dist/automerge-bundle.js)"></script>
+<script type="module" src="https://rozek.github.io/automerge-bundle/dist/automerge-bundle.js"></script>
 
 <script>
   if (window.automerge == null) {
