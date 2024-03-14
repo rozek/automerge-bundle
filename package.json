@@ -13,18 +13,8 @@
     "url": "https://github.com/rozek/automerge-bundle/issues"
   },
   "type": "module",
-  "source": "./src/automerge-bundle.js",
-  "types": "./dist/automerge-bundle.d.ts",
-  "exports": {
-    "types": "./dist/automerge-bundle.d.ts",
-    "require": "./dist/automerge-bundle.cjs",
-    "default": "./dist/automerge-bundle.modern.js"
-  },
-  "main": "./dist/automerge-bundle.cjs",
-  "module": "./dist/automerge-bundle.module.js",
-  "unpkg": "./dist/automerge-bundle.umd.js",
   "scripts": {
-    "build": "rimraf dist && microbundle --name automerge --target web",
+    "build": "rimraf dist && tsc && vite build --sourcemap true --assetsDir . && rm ./dist/index.html && mv ./dist/index.js ./dist/automerge-bundle.js && mv ./dist/index.js.map ./dist/automerge-bundle.js.map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -32,14 +22,17 @@
     "url": "git+https://github.com/rozek/automerge-bundle.git"
   },
   "devDependencies": {
-    "microbundle": "^0.15.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
   },
   "dependencies": {
     "@automerge/automerge": "^2.1.11-richtext-alpha.1",
     "@automerge/automerge-repo": "^1.1.2",
     "@automerge/automerge-repo-network-broadcastchannel": "^1.1.2",
     "@automerge/automerge-repo-network-websocket": "^1.1.2",
-    "@automerge/automerge-repo-storage-indexeddb": "^1.1.2"
+    "@automerge/automerge-repo-storage-indexeddb": "^1.1.2",
+    "vite-plugin-top-level-await": "^1.4.1",
+    "vite-plugin-wasm": "^3.3.0"
   }
 }
