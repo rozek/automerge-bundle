@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script type="module" src="/src/automerge-bundle.ts"></script>
+    
+    <script>
+      if (window.automerge == null) {
+      	document.addEventListener(
+      	  'automerge',(Event) => console.log('"automerge" has become available',window.automerge)
+      	)
+      }
+    
+      function waitForAutomerge () {
+      	if (window.automerge == null) {
+      		console.log('waiting for "automerge"')
+      		setTimeout(waitForAutomerge,100)
+      	} else {
+      		console.log('"automerge" has become available',window.automerge)
+      	}
+      }
+      waitForAutomerge()
+    </script>
+  </body>
+</html>
