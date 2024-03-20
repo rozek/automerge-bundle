@@ -1,6 +1,7 @@
 # automerge-bundle #
 
 an automerge bundle that can be used directly in the browser (e.g., for no-build environments like REPLs or similar)
+([live demo](https://rozek.de/automerge/sharedTextValue.html))
 
 [automerge](https://github.com/automerge/automerge) uses [WASM](https://webassembly.org/) under the hood and can therefore not directly be `import`ed into a browser - you will have to use a bundler (such as [Vite](https://vitejs.dev/)) that brings your web application into a format that can be loaded into a browser.
 
